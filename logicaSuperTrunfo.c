@@ -1,77 +1,66 @@
-
 #include <stdio.h>
 
 int main() {
-    
-    char codigo1[20], nome1[50];   
-    int populacao1, area1, pib1;    
+    char estado1, estado2;
+    char codigo1[5], codigo2[5];
+    char cidade1[100], cidade2[100];
+    int populacao1, populacao2;
+    float area1, area2, pib1, pib2;
+    int pontosTuristicos1, pontosTuristicos2;
 
-    char codigo2[20], nome2[50]; 
-    int populacao2, area2, pib2;    
-    
-    printf("-----DESAFIO SUPER TRUNFO-----\n");
-   
-    // Cadastro das Cartas (cidade1)
-    printf("Digite o código da cidade 1: ");
-    scanf("%s", codigo1);
-
-    printf("Digite o nome da cidade 1: ");
-    scanf("%s", nome1);
-
-    printf("Digite a população da cidade 1: ");
+    printf("Digite as informações da Carta 1:\n");
+    printf("Estado (A a H): ");
+    scanf(" %c", &estado1);
+    printf("Código da Carta (ex: A01, B03): ");
+    scanf(" %s", codigo1);
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", cidade1);
+    printf("População: ");
     scanf("%d", &populacao1);
+    printf("Área (em km²): ");
+    scanf("%f", &area1);
+    printf("PIB (em bilhões de reais): ");
+    scanf("%f", &pib1);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &pontosTuristicos1);
 
-    printf("Digite a área da cidade 1 (em km²): ");
-    scanf("%d", &area1);
+    printf("\n");
 
-    printf("Digite o PIB da cidade 1 (em milhões de R$): ");
-    scanf("%d", &pib1);
-    
-    // Cadastro das Cartas (cidade2)
-    printf("\nDigite o código da cidade 2: ");
+    printf("Digite as informações da Carta 2:\n");
+    printf("Estado (A a H): ");
+    scanf(" %c", &estado2);
+    printf("Código da Carta (ex: A01, B03): ");
     scanf("%s", codigo2);
-
-    printf("Digite o nome da cidade 2: ");
-    scanf("%s", nome2);
-
-    printf("Digite a população da cidade 2: ");
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", cidade2);
+    printf("População: ");
     scanf("%d", &populacao2);
+    printf("Área (em km²): ");
+    scanf("%f", &area2);
+    printf("PIB (em bilhões de reais): ");
+    scanf("%f", &pib2);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &pontosTuristicos2);
 
-    printf("Digite a área da cidade 2 (em km²): ");
-    scanf("%d", &area2);
+    printf("\nInformações da Carta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", cidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
-    printf("Digite o PIB da cidade 2 (em milhões de R$): ");
-    scanf("%d", &pib2);
-    
-    // Comparação das Cartas - Comparando as propriedades
-    printf("\n--- Resultado da Comparação ---\n");
-    
-    // Comparando a população
-    if (populacao1 > populacao2) {
-        printf("A cidade com maior população é: %s\n", nome1);
-    } else if (populacao1 < populacao2) {
-        printf("A cidade com maior população é: %s\n", nome2);
-    } else {
-        printf("As cidades têm a mesma população.\n");
-    }
+    printf("\n");
 
-    // Comparando a área
-    if (area1 > area2) {
-        printf("A cidade com maior área é: %s\n", nome1);
-    } else if (area1 < area2) {
-        printf("A cidade com maior área é: %s\n", nome2);
-    } else {
-        printf("As cidades têm a mesma área.\n");
-    }
+    printf("Informações da Carta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
 
-    // Comparando o PIB
-    if (pib1 > pib2) {
-        printf("A cidade com maior PIB é: %s\n", nome1);
-    } else if (pib1 < pib2) {
-        printf("A cidade com maior PIB é: %s\n", nome2);
-    } else {
-        printf("As cidades têm o mesmo PIB.\n");
-    }
-    
     return 0;
 }
